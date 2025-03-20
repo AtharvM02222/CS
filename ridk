@@ -1,1 +1,273 @@
 
+
+using System;
+
+
+namespace My_Awesome_Program
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("A proud knight named...");
+
+
+            Console.ReadLine();
+
+
+            Console.WriteLine("...walked into a bar. At the counter he met a...");
+
+
+            Console.ReadLine();
+
+
+            Console.WriteLine("...who asked him what he wanted to drink?");
+
+
+            Console.ReadLine();
+
+
+            Console.WriteLine("...shouted the knight! The bartender shushed him quickly.");
+
+
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("But it was too late... A dragon ate them both.");
+
+
+            // Wait before closing
+
+
+            Console.ReadKey();
+        }
+    }
+}
+
+
+--------------------------------
+
+using System;
+
+
+namespace My_Awesome_Program
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Declare variables
+            double num01;
+            double num02;
+            double num03;
+
+
+            // Get first number
+            Console.Write("Input a number: ");
+            num01 = Convert.ToDouble(Console.ReadLine());
+
+
+            // Get second number
+            Console.Write("Input a second number: ");
+            num02 = Convert.ToDouble(Console.ReadLine());
+
+
+            // Get third number
+            Console.Write("Input a third number: ");
+            num03 = Convert.ToDouble(Console.ReadLine());
+
+
+            // Calculate and display the average
+            double result = (num01 + num02 + num03) / 3;
+            Console.WriteLine("The average of these numbers is " + result);
+
+
+            // Wait before closing
+            Console.ReadKey();
+        }
+    }
+}
+
+
+-----------------//--------------------
+
+using System;
+
+
+namespace My_Awesome_Program
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int answer;
+            
+            // First problem
+            Console.Write("15 + 2 * 2 = ");
+
+
+            answer = Convert.ToInt32(Console.ReadLine());
+
+
+            if (answer == 60) {
+                Console.WriteLine("Correct!");
+            } else {
+                Console.WriteLine("Wrong!");
+            }
+
+
+            // Second problem
+            Console.Write("10 * 2 / 4 = ");
+
+
+            answer = Convert.ToInt32(Console.ReadLine());
+
+
+            if (answer == 5) {
+                Console.WriteLine("Correct!");
+            } else {
+                Console.WriteLine("Wrong!");
+            }
+
+
+            // Third problem
+            Console.Write("(4 + 3 + 2 + 1) / 2 = ");
+
+
+            answer = Convert.ToInt32(Console.ReadLine());
+
+
+            if (answer == 6) {
+                Console.WriteLine("Correct!");
+            } else {
+                Console.WriteLine("Wrong!");
+            }
+
+
+            // Wait before closing
+            Console.ReadKey();
+        }
+    }
+}
+-------------------------------------------------
+
+using System;
+
+namespace My_Awesome_Program
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+      Random numberGen = new Random();
+
+      int roll01 = 0;
+      int roll02 = 1;
+      int attempts = 0;
+
+      Console.WriteLine("Press enter to roll the dice.");
+       
+      while(roll01 != roll02)
+      {
+        Console.ReadKey();
+         
+        roll01 = numberGen.Next(1, 7);
+        roll02 = numberGen.Next(1, 7);
+         
+        Console.WriteLine("Roll 1: " + roll01);
+        Console.WriteLine("Roll 2: " + roll02 + "\n");
+
+        attempts++;
+      }
+
+      Console.WriteLine("It took you " + attempts + " attempts to roll two of a kind.");
+
+      // Wait before closing
+      Console.ReadKey();
+    }
+  }
+}
+--------------------------------
+
+using System;
+
+
+namespace My_Awesome_Program
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("How many students are in your class: ");
+
+
+            int studentCount = Convert.ToInt32(Console.ReadLine());
+
+
+            Console.WriteLine("Please input the names of the students: ");
+
+
+            string[] students = new string[studentCount];
+
+
+            for (int i = 0; i < studentCount; i++)
+            {
+                students[i] = Console.ReadLine();
+            }
+
+
+            Console.WriteLine("--------------");
+
+
+            Array.Sort(students);
+
+
+            for (int i = 0; i < studentCount; i++)
+            {
+                Console.WriteLine(students[i]);
+            }
+
+
+            // Wait before closing
+            Console.ReadKey();
+        }
+    }
+}
+---------------------------------------
+
+using System;
+
+
+namespace My_Awesome_Program
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter a sentence: ");
+
+
+            string sentence = Console.ReadLine();
+
+
+            int wordCount = CountWords(sentence);
+
+
+            Console.WriteLine("There are " + wordCount + " words in that sentence.");
+
+
+            // Wait before closing
+            Console.ReadKey();
+        }
+
+
+        static int CountWords (string sentence) {
+
+
+            int wordCount = sentence.Split(' ').Length;
+
+
+            return wordCount;
+        }
+    }
+}
+
+-----------________________
